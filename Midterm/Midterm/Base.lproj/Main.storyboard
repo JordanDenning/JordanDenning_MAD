@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Midterm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="run" translatesAutoresizingMaskIntoConstraints="NO" id="9Xg-20-E7A">
+                                <rect key="frame" x="105" y="373" width="110" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="R45-cP-8ko"/>
+                                    <constraint firstAttribute="width" secondItem="9Xg-20-E7A" secondAttribute="height" multiplier="153:122" id="Yrq-KU-h9Q"/>
+                                    <constraint firstAttribute="width" secondItem="9Xg-20-E7A" secondAttribute="height" multiplier="110:87" id="bwC-jE-I4I"/>
+                                    <constraint firstAttribute="width" constant="110" id="mdw-vc-p93"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2Yx-0M-VjT">
+                                <rect key="frame" x="12" y="49" width="296" height="260"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="ylh-ng-HWd">
+                                        <rect key="frame" x="1" y="0.0" width="294" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workout Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjW-l4-s2D">
+                                                <rect key="frame" x="0.0" y="0.0" width="107" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mda-o8-C8o">
+                                                <rect key="frame" x="197" y="0.0" width="97" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="97" id="3oj-wX-yDP"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" enablesReturnKeyAutomatically="YES"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="42m-Hv-Zg7">
+                                        <rect key="frame" x="0.0" y="50" width="296" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Weekly(5 Days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZf-LY-9ap">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e2g-e4-bHd">
+                                                <rect key="frame" x="247" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="weeklySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="JL9-bM-yDE"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hhZ-bi-csa">
+                                        <rect key="frame" x="76.5" y="101" width="143" height="29"/>
+                                        <segments>
+                                            <segment title="Run"/>
+                                            <segment title="Bike"/>
+                                            <segment title="Swim"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="imagePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="3HV-BI-Ycj"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujN-vi-IEo">
+                                        <rect key="frame" x="119" y="149" width="58" height="30"/>
+                                        <state key="normal" title="Workout"/>
+                                        <connections>
+                                            <action selector="calcWorkout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qq-Ee-zRq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qq-KH-Z1s">
+                                        <rect key="frame" x="128" y="199" width="40" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAm-hN-sf1">
+                                        <rect key="frame" x="87" y="239.5" width="122" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" alignment="center" spacing="2"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Yx-0M-VjT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AW1-RP-4rI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Xg-20-E7A" secondAttribute="bottom" constant="20" id="MzU-JZ-mrw"/>
+                            <constraint firstItem="2Yx-0M-VjT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="Vjb-iL-WdJ"/>
+                            <constraint firstItem="9Xg-20-E7A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kUx-KQ-fPt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="caloriesBurned" destination="MAm-hN-sf1" id="9SF-9k-ZjW"/>
+                        <outlet property="milesRan" destination="6Qq-KH-Z1s" id="Di2-Jf-ieV"/>
+                        <outlet property="showWeekly" destination="e2g-e4-bHd" id="bsD-3y-eMs"/>
+                        <outlet property="timeTextfield" destination="Mda-o8-C8o" id="PYD-NO-P4t"/>
+                        <outlet property="workoutImg" destination="9Xg-20-E7A" id="F8u-U4-v8w"/>
+                        <outlet property="workoutType" destination="hhZ-bi-csa" id="saY-bG-CLd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="133.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="run" width="256" height="246"/>
+    </resources>
+</document>
